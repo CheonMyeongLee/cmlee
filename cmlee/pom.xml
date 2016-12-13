@@ -1,14 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>slipp</groupId>
-  <artifactId>cmlee</artifactId>
+  <artifactId>qna</artifactId>
   <version>1.0.0</version>
   <packaging>war</packaging>
   
   <build>
-    <finalName>cmlee</finalName>
+    <finalName>qna</finalName>
     
-    <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -18,8 +17,15 @@
             <!-- put your configurations here -->
           </configuration>
         </plugin>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <version>3.0.0</version>
+	        <configuration>
+				<warSourceDirectory>webapp</warSourceDirectory>
+	        </configuration>
+	      </plugin>        
       </plugins>
-    </pluginManagement>
   </build>
   
 </project>
